@@ -46,5 +46,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Schreibt Temperaturen nach HealthKit.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Liest Temperaturen von HealthKit</string>
 </dict>
 </plist>

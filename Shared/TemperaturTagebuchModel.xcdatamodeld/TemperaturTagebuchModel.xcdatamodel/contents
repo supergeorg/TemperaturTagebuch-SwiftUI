@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17175" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="nachname" attributeType="String" defaultValueString="Name"/>
+        <attribute name="vorname" attributeType="String" defaultValueString="Vorname"/>
+        <relationship name="temperaturen" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TemperaturMessung" inverseName="person" inverseEntity="TemperaturMessung"/>
+    </entity>
+    <entity name="TemperaturMessung" representedClassName="TemperaturMessung" syncable="YES" codeGenerationType="class">
+        <attribute name="datum" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="temperatur" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="person" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="temperaturen" inverseEntity="Person"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="TemperaturMessung" positionX="-54" positionY="-9" width="128" height="103"/>
+    </elements>
+</model>
